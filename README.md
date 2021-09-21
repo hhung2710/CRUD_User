@@ -2,7 +2,9 @@
 
 Install package:
 
+```bash
 npm install
+```
 
 Set the environment variables:
 
@@ -10,7 +12,10 @@ Set the environment variables:
 cp .env.example .env
 
 # open .env and modify the environment variables (if needed)
+```
 
 Strat server
 
+```bash
 npm start
+```
