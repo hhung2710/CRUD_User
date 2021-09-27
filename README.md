@@ -18,21 +18,21 @@ Use Postman to send the request.
 
 Get all users:
 ```bash
-[GET] locahost:3000/user/getall
+[GET] locahost:3000/user/
 ```
 Get user by Id:
 ```bash
-[GET] localhost:3000/user/get/:id
+[GET] localhost:3000/user/:id
 ```
 Create an user:
 ```bash
-[POST] localhost:3000/user/post
+[POST] localhost:3000/user/create
 ```
 Update an user:
 ```bash
-[PUT] localhost:3000/user/update/:id
+[PUT] localhost:3000/user/:id
 ```
 Delete an user:
 ```bash
-[DELETE] localhost:3000/user/delete/:id
+[DELETE] localhost:3000/user/:id
 ```
