@@ -1,9 +1,19 @@
-const Sequelize = require('sequelize');
-const {db} = require('./config');
+const typeorm = require("typeorm");
+const config = require("./config");
 
-const sequelize = new Sequelize(db.dbname, db.username, db.password, {
-    host: db.host,
-    dialect: db.dialect
-});
+const getConnection = typeorm.createConnection({
+    type: config.db.dialect,
+    host: config.db.host,
+    port: 5432,
+    username: config.db.username,
+    password: config.db.password,
+    database: config.db.dbname,
+    synchronize: true,
+    entities: [
+        require('../entities/user.entity')
+    ]
+})
 
-module.exports = sequelize;
+module.exports = {
+    getConnection
+}
